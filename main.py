@@ -17,10 +17,12 @@ def main(page:Page):
                 answer_control = Text(value=f"Is_Valid: {answer['is_valid']}")
                 country = Text(value=f"Country: {answer['country']}")
                 location = Text(value=f"Location: {answer["location"]}")
+                text = Text(value=f"Phone Number: {user_input.value}")
 
                 _answer_column.controls.append(answer_control)
                 _answer_column.controls.append(country)
                 _answer_column.controls.append(location)
+                user_input.value = ""
 
                 page.update()
 
